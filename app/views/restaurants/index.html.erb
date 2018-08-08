@@ -1,0 +1,16 @@
+<h2>My list of restaurants</h2>
+<%= link_to "Create new restaurant", new_restaurant_path %>
+<% @restaurants.each do |restaurant| %>
+<div class= "card">
+<h3><%= restaurant.name %></h3>
+<p><%= restaurant.category %></p>
+<p><%= restaurant.address %></p>
+<p><%= restaurant.phone_number %> </p>
+<p><%= restaurant.reviews.each do |review| %></p>
+<P><%= review.content %></P>
+<p><%= review.rating %></p>
+<%= link_to "Write a review", new_restaurant_review_path(retaurant) %>
+ </div>
+<% end %>
+<% end %>
+
