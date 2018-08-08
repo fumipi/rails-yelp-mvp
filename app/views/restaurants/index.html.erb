@@ -6,11 +6,7 @@
 <p><%= restaurant.category %></p>
 <p><%= restaurant.address %></p>
 <p><%= restaurant.phone_number %> </p>
-<p><%= restaurant.reviews.each do |review| %></p>
-<P><%= review.content %></P>
-<p><%= review.rating %></p>
-<%= link_to "Write a review", new_restaurant_review_path(retaurant) %>
+<%= link_to "See details", restaurant_path(restaurant), class: "btn btn-primary"%>
  </div>
-<% end %>
 <% end %>
 
